@@ -1,0 +1,7 @@
+/*cache*/
+/.vscode/
+/build/
+/images/
+/script/
+plan.txt
+*.zst
