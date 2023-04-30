@@ -9,6 +9,7 @@ A tiny x86 operating system, referring to the source code of Linux 0.11.
 
 ## How to build?
 ```bash
+mkdir -p images/
 cmake -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -B build/ -G "Unix Makefiles"
 cmake --build build/ --target all
 ```
