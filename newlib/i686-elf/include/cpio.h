@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 /* POSIX.1 symbolic constants for c_mode field of cpio archive format */
 
 #ifndef _CPIO_H

@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 project(boot LANGUAGES C)
 
 set(CMAKE_EXE_LINKER_FLAGS "-m elf_i386 -Ttext=0x7c00 --section-start boot_end=0x7dfe")

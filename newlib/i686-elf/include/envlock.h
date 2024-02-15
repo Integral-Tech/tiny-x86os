@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 /* envlock.h -- header file for env routines.  */
 
 #ifndef _INCLUDE_ENVLOCK_H_

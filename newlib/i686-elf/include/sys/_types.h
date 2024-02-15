@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 /* ANSI C namespace clean utility typedefs */
 
 /* This file defines various typedefs needed by the system calls that support

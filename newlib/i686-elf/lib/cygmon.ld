@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 STARTUP(cygmon-crt0.o)
 ENTRY(__start)
 GROUP(-lcygmon -lc -lcygmon -lgcc)

@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 #ifndef __MACHINE_ENDIAN_H__
 #error "must be included via <machine/endian.h>"
 #endif /* !__MACHINE_ENDIAN_H__ */

@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 #include "tools/log.h"
 #include "comm/cpu_instr.h"
 #include "dev/dev.h"

@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 /*
  * Newlib targets may provide an own version of this file in their machine
  * directory to add custom user types for <sys/types.h>.

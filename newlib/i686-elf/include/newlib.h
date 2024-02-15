@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 /* newlib.h.  Generated from newlib.hin by configure.  */
 /* newlib.hin.  Manually edited from the output of autoheader to
    remove all PACKAGE_ macros which will collide with any user

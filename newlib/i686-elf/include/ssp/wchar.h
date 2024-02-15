@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 #ifndef _SSP_WCHAR_H_
 #define _SSP_WCHAR_H_
 

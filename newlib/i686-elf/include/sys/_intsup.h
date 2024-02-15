@@ -1,10 +1,7 @@
-/*
- * Copyright (c) 2004, 2005 by
- * Ralf Corsepius, Ulm/Germany. All rights reserved.
- *
- * Permission to use, copy, modify, and distribute this software
- * is freely granted, provided that this notice is preserved.
- */
+// Copyright (c) 2004, 2005 by
+// SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
 
 #ifndef _SYS__INTSUP_H
 #define _SYS__INTSUP_H

@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 cmake_minimum_required(VERSION 3.0.0)
 
 set(CMAKE_VERBOSE_MAKEFILE on)

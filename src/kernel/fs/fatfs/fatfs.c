@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 #include "fs/fatfs/fatfs.h"
 #include "core/memory.h"
 #include "dev/dev.h"

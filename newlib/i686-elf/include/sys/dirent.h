@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 /* <dirent.h> includes <sys/dirent.h>, which is this file.  On a
    system which supports <dirent.h>, this file is overridden by
    dirent.h in the libc/sys/.../sys directory.  On a system which does

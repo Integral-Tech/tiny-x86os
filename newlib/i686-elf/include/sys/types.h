@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 /* unified sys/types.h: 
    start with sef's sysvi386 version.
    merge go32 version -- a few ifdefs.

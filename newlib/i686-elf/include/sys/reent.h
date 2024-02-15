@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 /* This header file provides the reentrancy.  */
 
 /* WARNING: All identifiers here must begin with an underscore.  This file is
@@ -300,20 +304,11 @@ struct _glue
   __FILE *_iobs;
 };
 
-/*
- * rand48 family support
- *
- * Copyright (c) 1993 Martin Birgmeier
- * All rights reserved.
- *
- * You may redistribute unmodified or modified versions of this source
- * code provided that the above copyright notice and this and the
- * following conditions are retained.
- *
- * This software is provided ``as is'', and comes with no warranties
- * of any kind. I shall in no event be liable for anything that happens
- * to anyone/anything when using this software.
- */
+// Copyright (c) 1993 Martin Birgmeier
+// SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 #define        _RAND48_SEED_0  (0x330e)
 #define        _RAND48_SEED_1  (0xabcd)
 #define        _RAND48_SEED_2  (0x1234)

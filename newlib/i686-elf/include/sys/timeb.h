@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 /* timeb.h -- An implementation of the standard Unix <sys/timeb.h> file.
    Written by Ian Lance Taylor <ian@cygnus.com>
    Public domain; no rights reserved.

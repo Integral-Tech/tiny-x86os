@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 project(uname LANGUAGES C)
 
 set(LIBS_FLAGS "-L ${CMAKE_BINARY_DIR}/../newlib/i686-elf/lib/ -lm -lc")

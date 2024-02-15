@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 /* This is a dummy <sys/param.h> file, not customized for any
    particular system.  If there is a param.h in libc/sys/SYSDIR/sys,
    it will override this one.  */

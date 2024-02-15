@@ -1,14 +1,7 @@
-/*
- * Copyright (C) 1991 DJ Delorie
- * All rights reserved.
- *
- * Redistribution, modification, and use in source and binary forms is permitted
- * provided that the above copyright notice and following paragraph are
- * duplicated in all such forms.
- *
- * This file is distributed WITHOUT ANY WARRANTY; without even the implied
- * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- */
+// Copyright (C) 1991 DJ Delorie
+// SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
 
 /* Modified to use SETJMP_DJ_H rather than SETJMP_H to avoid
    conflicting with setjmp.h.  Ian Taylor, Cygnus support, April,

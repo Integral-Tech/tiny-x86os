@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 /* internal use only -- mapping of "system calls" for libraries that lose
    and only provide C names, so that we end up in violation of ANSI */
 #ifndef __SYSLIST_H

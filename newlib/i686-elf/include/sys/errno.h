@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2024 Integral <integral@member.fsf.org>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 /* errno is not a global variable, because that would make using it
    non-reentrant.  Instead, its address is returned by the function
    __errno.  */
