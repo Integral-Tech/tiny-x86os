@@ -25,14 +25,9 @@ cmake --build build/ --target all
 cmake --build build/ --target all -j `nproc`
 ```
 
-## How to Run?
-Make sure you get ```qemu-system-i386``` installed.
-
-Download the disk image from Releases, then execute
-```bash
-qemu-system-i386 -m 128M -drive file=disk1.img,format=raw -drive file=disk2.img,format=raw
-```
-
 ## Note
 - The password is **tinyx86os**
 - This operating system is very simple and buggy, so it is only for learning!
+
+## License
+- Licensed under the [GNU General Public License, version 3 or any later version](https://codeberg.org/Integral/tiny-x86os/src/branch/master/LICENSES/GPL-3.0-or-later.txt).
