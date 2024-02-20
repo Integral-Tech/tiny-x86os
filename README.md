@@ -30,4 +30,4 @@ cmake --build build/ --target all -j `nproc`
 - This operating system is very simple and buggy, so it is only for learning!
 
 ## License
-- Licensed under the [GNU General Public License, version 3 or any later version](https://codeberg.org/Integral/tiny-x86os/src/branch/master/LICENSES/GPL-3.0-or-later.txt).
+- Licensed under the [GNU General Public License, version 3 or any later version](LICENSES/GPL-3.0-or-later.txt).
