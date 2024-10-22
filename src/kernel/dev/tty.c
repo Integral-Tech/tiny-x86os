@@ -71,7 +71,7 @@ int tty_dequeue(tty_queue_t *queue, char *data) {
   return 0;
 }
 
-int tty_open(const device_t *dev) {
+int tty_open(device_t *dev) {
   const int tty_id = get_tty_id(dev);
   if (tty_id < 0)
     return -1;
