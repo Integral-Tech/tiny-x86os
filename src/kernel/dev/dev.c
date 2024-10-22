@@ -35,8 +35,7 @@ int dev_open(major_no_t major_no, int minor_no, void *data) {
 
   for (int i = 0; i < DEV_TABLE_SIZE; i++) {
     device_t *device = dev_table + i;
-    if (device->desc->major_no == major_no &&
-        device->minor_no == minor_no) {
+    if (device->desc->major_no == major_no && device->minor_no == minor_no) {
       device->open_cnt++;
       irq_unprotect(state);
       return i;

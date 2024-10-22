@@ -68,7 +68,7 @@ int gdt_alloc_desc() {
       mutex_unlock(&mutex);
       return i * sizeof(segment_desc_t);
     } // return the selector of the empty item
-  }   // find an empty item in GDT
+  } // find an empty item in GDT
 
   mutex_unlock(&mutex);
   return -1; // fail to find -> return -1

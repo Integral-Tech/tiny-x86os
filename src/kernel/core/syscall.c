@@ -33,8 +33,7 @@ static const syscall_handler_t sys_table[] = {
     [SYS_CLOSEDIR] = (syscall_handler_t)sys_closedir,
     [SYS_POWEROFF] = (syscall_handler_t)sys_poweroff,
     [SYS_REBOOT] = (syscall_handler_t)sys_reboot,
-    [SYS_UNLINK] = (syscall_handler_t)sys_unlink
-};
+    [SYS_UNLINK] = (syscall_handler_t)sys_unlink};
 
 void do_handle_syscall(syscall_frame_t *frame) {
   if (frame->auto_push.func_id < sizeof(sys_table) / sizeof(*sys_table)) {

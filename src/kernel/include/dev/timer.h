@@ -10,7 +10,8 @@
 #define PIT_CHANNEL0_DATA_PORT 0x40
 
 #define PIT_CHANNEL0 (0 << 6) // select counter 0
-#define PIT_LOAD_LOHI (3 << 4) // load the lower byte first, then the higher byte
+#define PIT_LOAD_LOHI                                                          \
+  (3 << 4) // load the lower byte first, then the higher byte
 #define PIT_MODE3 (3 << 1)
 
 void time_init();

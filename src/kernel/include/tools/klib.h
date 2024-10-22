@@ -12,14 +12,14 @@
   ({                                                                           \
     typeof(size) _size = (size);                                               \
     typeof(bound) _bound = (bound);                                            \
-    _size & ~(_bound - 1);                                                      \
+    _size & ~(_bound - 1);                                                     \
   })
 
 #define up2(size, bound)                                                       \
   ({                                                                           \
     typeof(size) _size = (size);                                               \
     typeof(bound) _bound = (bound);                                            \
-    (_size + _bound - 1) & ~(_bound - 1);                                       \
+    (_size + _bound - 1) & ~(_bound - 1);                                      \
   })
 
 char *kernel_strcpy(char *dest, const char *src);

@@ -33,7 +33,7 @@ typedef struct _tty_t {
   int console_id;
 } tty_t;
 
-int tty_open(device_t* dev);
+int tty_open(device_t *dev);
 int tty_close(const device_t *dev);
 int tty_read(const device_t *dev, uint32_t addr, void *buf, size_t size);
 int tty_write(const device_t *dev, uint32_t addr, const void *buf, size_t size);

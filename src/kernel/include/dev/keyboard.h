@@ -34,7 +34,7 @@
 #define KEY_F11 0x57
 #define KEY_F12 0x58
 
-#define is_make_code(key_code) !((key_code)&0x80)
+#define is_make_code(key_code) !((key_code) & 0x80)
 
 typedef struct _key_map_t {
   uint8_t normal, func;
