@@ -27,7 +27,7 @@ int devfs_mount(fs_t *fs, int major_no, int minor_no) {
 int devfs_unmount(fs_t *fs) { return 0; }
 
 int devfs_open(fs_t *fs, const char *path, file_t *file) {
-  for (size_t i = 0; i < sizeof(dev_type_table) / sizeof(devfs_type_t); i++) {
+  for (size_t i = 0; i < ARR_SIZE(dev_type_table); i++) {
     const devfs_type_t *curr = dev_type_table + i;
     const size_t type_name_len = kernel_strlen(curr->name);
     if (str_begin_with(path, curr->name)) {

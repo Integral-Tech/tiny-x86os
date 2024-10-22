@@ -74,4 +74,6 @@ const char *kernel_basename(const char *path);
 #define toupper(ch) (ch) += 'A' - 'a';
 #define tolower(ch) (ch) += 'a' - 'A';
 
+#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
+
 #endif

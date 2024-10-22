@@ -131,7 +131,7 @@ static void create_kernel_table() {
        .pStart = (void *)MEM_EXT_START,
        .privilege = PTE_W}};
 
-  for (size_t i = 0; i < sizeof(kernel_map) / sizeof(memory_map_t); i++) {
+  for (size_t i = 0; i < ARR_SIZE(kernel_map); i++) {
     const memory_map_t *map = kernel_map + i;
 
     const uint32_t vStart = down2((uint32_t)map->vStart, MEM_PAGE_SIZE);
