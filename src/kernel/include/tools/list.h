@@ -36,6 +36,9 @@ void list_init(list_t *list);
 #define list_first(list) ((list)->first)
 #define list_last(list) ((list)->last)
 
+#define list_for_each(list, node) \
+    for (node = list_first(list); node; node = list_node_next(node))  \
+
 void list_insert_first(list_t *list, list_node_t *node);
 void list_insert_last(list_t *list, list_node_t *node);
 list_node_t *list_remove_first(list_t *list);
