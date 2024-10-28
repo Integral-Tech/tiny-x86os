@@ -7,6 +7,7 @@
 #include "lib_syscall.h"
 #include "md5.h"
 #include "os_cfg.h"
+#include "tools.h"
 #include <stdlib.h>
 #include <string.h>
 #include <sys/file.h>
@@ -363,7 +364,7 @@ static const cmd_t *find_builtin_cmd(const char *name) {
 static void run_builtin_cmd(const cmd_t *cmd, int argc, char **argv) {
   const int ret = cmd->func(argc, argv);
   if (ret < 0)
-    fprintf(stderr, ERR_STR("Error occurs during the execution: %d"), ret);
+    eprintf(ERR_STR("Error occurs during the execution: %d"), ret);
 }
 
 static const char *find_exec_file(const char *path) {
@@ -378,12 +379,11 @@ static const char *find_exec_file(const char *path) {
 static void run_exec_file(const char *path, int argc, char **argv) {
   const int pid = fork();
   if (pid < 0)
-    fprintf(stderr, "Fork failed! File path = %s", path);
+    eprintf("Fork failed! File path = %s", path);
   else if (pid == 0) { // child process
     const int err = execve(path, argv, NULL);
     if (err < 0)
-      fprintf(stderr, "Failed to execute file %s, error code = %d\n", path,
-              err);
+      eprintf("Failed to execute file %s, error code = %d\n", path, err);
 
     exit(err);
   } else { // parent process
@@ -474,6 +474,6 @@ passwd_correct:
       continue;
     } // Execute applications from disk
 
-    fprintf(stderr, ERR_STR("Command not found: %s"), str);
+    eprintf(ERR_STR("Command not found: %s"), str);
   }
 }
