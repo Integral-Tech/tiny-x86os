@@ -5,10 +5,14 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include "os_cfg.h"
+
 #define CLI_INPUT_SIZE 1024
 #define CMD_MAX_ARGC 10
 #define STR_BUF_SIZE 1024
 #define CP_BUF_SIZE 1024
+
+#define PROMPT "[" USERNAME "@" HOSTNAME " /]#"
 
 #define ESC_CMD_2ARG(Pn, cmd) "\033[" #Pn #cmd
 #define ESC_CLEAR_SCREEN ESC_CMD_2ARG(2, J)

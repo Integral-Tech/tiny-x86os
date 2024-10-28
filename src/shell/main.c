@@ -6,14 +6,13 @@
 #include "dev/tty.h"
 #include "lib_syscall.h"
 #include "md5.h"
-#include "os_cfg.h"
 #include "tools.h"
+#include "tools/klib.h"
 #include <stdlib.h>
 #include <string.h>
 #include <sys/file.h>
 
 static cli_t cli;
-static const char *prompt = "[" USERNAME "@" HOSTNAME " /]#";
 
 static const char echo_esc_map[] = {
     ['\\'] = '\\', ['b'] = '\b', ['r'] = '\r', ['n'] = '\n', ['t'] = '\t'};
@@ -394,7 +393,7 @@ static void run_exec_file(const char *path, int argc, char **argv) {
 }
 
 static void cli_init(const char *prompt, const cmd_t *cmd_list, size_t size) {
-  cli.prompt = prompt;
+  cli.prompt = PROMPT;
   memset(cli.input_buf, 0, CLI_INPUT_SIZE);
   cli.cmd_start = cmd_list;
   cli.cmd_end = cmd_list + size;
@@ -410,7 +409,7 @@ int main(int argc, char **argv) {
   dup(0);              // stdout(1)
   dup(0);              // stderr(2)
 
-  cli_init(prompt, cmd_list, ARRAY_SIZE(cmd_list));
+  cli_init(PROMPT, cmd_list, ARRAY_SIZE(cmd_list));
   printf("%s %s (%s)\n", OS_NAME, OS_VERSION, *argv);
 
   ioctl(0, TTY_CMD_ECHO, NULL, NULL); // Disable input echo
