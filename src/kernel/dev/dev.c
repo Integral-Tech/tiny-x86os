@@ -52,7 +52,7 @@ int dev_open(major_no_t major_no, int minor_no, void *data) {
   }
 
   dev_desc_t *dev_desc = NULL;
-  for (size_t i = 0; i < ARR_SIZE(dev_desc_table); i++) {
+  for (size_t i = 0; i < ARRAY_SIZE(dev_desc_table); i++) {
     dev_desc_t *curr_dev_desc = dev_desc_table[i];
     if (curr_dev_desc->major_no == major_no) {
       dev_desc = curr_dev_desc;

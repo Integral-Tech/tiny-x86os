@@ -410,7 +410,7 @@ int main(int argc, char **argv) {
   dup(0);              // stdout(1)
   dup(0);              // stderr(2)
 
-  cli_init(prompt, cmd_list, sizeof(cmd_list) / sizeof(*cmd_list));
+  cli_init(prompt, cmd_list, ARRAY_SIZE(cmd_list));
   printf("%s %s (%s)\n", OS_NAME, OS_VERSION, *argv);
 
   ioctl(0, TTY_CMD_ECHO, NULL, NULL); // Disable input echo

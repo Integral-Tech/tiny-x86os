@@ -36,7 +36,7 @@ static const syscall_handler_t sys_table[] = {
     [SYS_UNLINK] = (syscall_handler_t)sys_unlink};
 
 void do_handle_syscall(syscall_frame_t *frame) {
-  if (frame->auto_push.func_id < sizeof(sys_table) / sizeof(*sys_table)) {
+  if (frame->auto_push.func_id < ARRAY_SIZE(sys_table)) {
     const syscall_handler_t handler = sys_table[frame->auto_push.func_id];
     if (handler) {
       const int ret = handler(frame->auto_push.arg0, frame->auto_push.arg1,

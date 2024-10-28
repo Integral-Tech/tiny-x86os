@@ -76,6 +76,6 @@ const char *kernel_basename(const char *path);
 
 #define streq(s1, s2) (!kernel_strcmp(s1, s2))
 
-#define ARR_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
+#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
 #endif
