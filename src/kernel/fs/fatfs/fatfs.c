@@ -258,7 +258,7 @@ int fatfs_open(fs_t *fs, const char *path, file_t *file) {
 
     char curr_filename[FAT_FILENAME_LEN + 2]; // '.' & '\0'
     dirent_get_name(curr_dirent, curr_filename);
-    if (!kernel_strcmp(kernel_strlwr(curr_filename), path)) {
+    if (streq(kernel_strlwr(curr_filename), path)) {
       dirent = curr_dirent;
       dirent_index = i;
       break;
@@ -496,7 +496,7 @@ int fatfs_unlink(fs_t *fs, const char *path) {
 
     char curr_filename[FAT_FILENAME_LEN + 2]; // '.' & '\0'
     dirent_get_name(curr_dirent, curr_filename);
-    if (!kernel_strcmp(kernel_strlwr(curr_filename), path)) {
+    if (streq(kernel_strlwr(curr_filename), path)) {
       cluster_unlink(fat, prev_dirent, curr_dirent);
 
       dirent_t null_dirent;
