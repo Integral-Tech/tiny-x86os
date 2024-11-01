@@ -9,3 +9,4 @@
 /script/
 plan.txt
 *.zst
+compile_commands.json
