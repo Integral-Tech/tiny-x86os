@@ -37,7 +37,7 @@ int sys_open(const char *path, flag_t flag, ...) {
     goto open_failed;
 
   fs_t *fs = NULL;
-  list_for_each(&mounted_list, node) {
+  list_for_each_node(&mounted_list, node) {
     fs_t *curr = list_node_parent(node, fs_t, node);
     if (str_begin_with(path, curr->mount_point)) {
       fs = curr;
@@ -200,7 +200,7 @@ static fs_t *mount(fs_type_t type, char *mnt_point, int major_no,
   log_printf("Mounting file system...");
   log_printf("Mountpoint: %s, Dev: %d", mnt_point, major_no);
 
-  list_for_each(&mounted_list, curr) {
+  list_for_each_node(&mounted_list, curr) {
     const fs_t *fs = list_node_parent(curr, fs_t, node);
     if (!kernel_strncmp(fs->mount_point, mnt_point, MOUNTPOINT_SIZE)) {
       log_printf("Mountpoint %s is busy!", mnt_point);
