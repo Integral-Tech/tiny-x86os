@@ -18,8 +18,7 @@ static const char echo_esc_map[] = {
     ['\\'] = '\\', ['b'] = '\b', ['r'] = '\r', ['n'] = '\n', ['t'] = '\t'};
 
 static int cmd_help(int argc, char **argv) {
-  for (const cmd_t *start = cli.cmd_start; start < cli.cmd_end; start++)
-    printf("%s %s\n", start->name, start->usage);
+  cli_for_each_cmd(cli, cmd) printf("%s %s\n", cmd->name, cmd->usage);
 
   return 0;
 }
@@ -353,9 +352,7 @@ static const cmd_t cmd_list[] = {
     {.name = "exit", .usage = EXIT_USAGE, .func = cmd_exit}};
 
 static const cmd_t *find_builtin_cmd(const char *name) {
-  for (const cmd_t *cmd = cli.cmd_start; cmd < cli.cmd_end; cmd++)
-    if (!strcmp(cmd->name, name))
-      return cmd;
+  cli_for_each_cmd(cli, cmd) if (!strcmp(cmd->name, name)) return cmd;
 
   return NULL;
 }

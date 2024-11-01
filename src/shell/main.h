@@ -47,4 +47,7 @@ typedef struct _cli_t {
 
 typedef enum { CAT, LESS } show_mode_t;
 
+#define cli_for_each_cmd(cli, cmd)                                             \
+  for (const cmd_t *cmd = (cli).cmd_start; cmd < (cli).cmd_end; (cmd)++)
+
 #endif
