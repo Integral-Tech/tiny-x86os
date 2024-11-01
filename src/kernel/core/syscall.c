@@ -7,8 +7,8 @@
 #include "acpi/reboot.h"
 #include "core/memory.h"
 #include "fs/fs.h"
-#include "tools/log.h"
 #include "tools/klib.h"
+#include "tools/log.h"
 
 static const syscall_handler_t sys_table[] = {
     [SYS_SLEEP] = (syscall_handler_t)sys_sleep,
