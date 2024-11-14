@@ -32,6 +32,13 @@ typedef struct _file_t {
 
 file_t *file_alloc();
 void file_free(file_t *file);
+
+static inline void file_cleanup(file_t **file) {
+  file_free(*file);
+}
+
+#define _cleanup_file_ __attribute__((cleanup(file_cleanup)))
+
 void file_table_init();
 void file_ref_inc(file_t *file);
 

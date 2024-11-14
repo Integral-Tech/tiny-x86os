@@ -28,12 +28,12 @@ static void fs_unprotect(fs_t *fs) {
 }
 
 int sys_open(const char *path, flag_t flag, ...) {
-  file_t *file = file_alloc();
+  _cleanup_file_ file_t *file = file_alloc();
   if (!file)
     return -1;
 
-  int fd = -1;
-  if ((fd = task_alloc_fd(file)) < 0)
+  int fd = task_alloc_fd(file);
+  if (fd < 0)
     goto open_failed;
 
   fs_t *fs = NULL;
@@ -62,8 +62,8 @@ int sys_open(const char *path, flag_t flag, ...) {
 
   fs_unprotect(fs);
   return fd;
+
 open_failed:
-  file_free(file);
   if (fd >= 0)
     task_remove_fd(fd);
 
