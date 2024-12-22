@@ -154,7 +154,7 @@ uint32_t memory_create_uvm() {
   const uint32_t user_pde_start = pde_index(MEM_TASK_BASE);
 
   for (size_t i = 0; i < user_pde_start; i++)
-    (pde + i)->value = kernel_page_dir[i].value;
+    pde[i].value = kernel_page_dir[i].value;
 
   return (uint32_t)pde;
 }
